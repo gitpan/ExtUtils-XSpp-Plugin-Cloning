@@ -2,13 +2,10 @@ package ExtUtils::XSpp::Plugin::Cloning;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Carp ();
 use ExtUtils::XSpp ();
-use Class::XSAccessor {
-  constructor => 'new',
-};
 
 =head1 NAME
 
@@ -52,6 +49,13 @@ the instances from being cloned. Note that due to this implementation detail,
 the effect of the C<%PreventCloning> directive is inheritable.
 
 =cut
+
+sub new {
+  my $class = shift;
+  my $self = {@_};
+  bless $self => $class;
+  return $self;
+}
 
 sub register_plugin {
   my ($class, $parser) = @_;

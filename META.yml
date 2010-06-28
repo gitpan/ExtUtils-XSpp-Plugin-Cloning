@@ -16,10 +16,10 @@ name: ExtUtils-XSpp-Plugin-Cloning
 provides:
   ExtUtils::XSpp::Plugin::Cloning:
     file: lib/ExtUtils/XSpp/Plugin/Cloning.pm
-    version: 0.01
+    version: 0.02
 requires:
   ExtUtils::XSpp: 0.11_02
   perl: v5.6.1
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.01
+version: 0.02
